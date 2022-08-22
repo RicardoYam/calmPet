@@ -62,6 +62,14 @@ flutter:
   assets:
     - images/login.png
 
+  fonts:
+    - family: kang
+      fonts:
+        - asset: fonts/Huakang.ttf
+    - family: test
+      fonts:
+        - asset: fonts/test.ttf
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

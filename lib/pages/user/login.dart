@@ -25,46 +25,67 @@ class _LoginState extends State<Login> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-              width: 200.0,
+              width: 210.0,
               child: TextField(
                 autofocus: true,
                 decoration: InputDecoration(
-                    hintText: "Username"),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(50.0)
+                  ),
+                  hintText: "Username",
+                  filled: true,
+                  fillColor: Color.fromARGB(51, 5, 20, 110)),
+                style: TextStyle(fontFamily: 'test', fontSize: 16.0)
               ),
             ),
             SizedBox(height: 10.0),
             SizedBox(
-            width: 200.0,
-            child: TextField(
-            decoration: InputDecoration(
-                hintText: "Password"),
-            obscureText: true,
-          )),
+              width: 210.0,
+              child: TextField(
+                autofocus: true,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(50.0)
+                  ),
+                  hintText: "Password",
+                  filled: true,
+                  fillColor: Color.fromARGB(51, 5, 20, 110)),
+                style: TextStyle(fontFamily: 'test', fontSize: 16.0)
+              ),
+            ),
           SizedBox(
-            height: 20.0,
+            height: 10.0,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 90.0,
+                width: 100.0,
                 height: 40.0,
                 child: ElevatedButton(
-                  child: Text("Login"),
+                  child: Text("Login", style: TextStyle(fontFamily: 'test', fontSize: 16.0)),
                   onPressed: () => Navigator.pushNamed(context, '/tabs'),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.orange
+                    primary: Colors.orange,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                    )
                   ),
               )),
-              SizedBox(width: 30.0),
+              SizedBox(width: 10.0),
               SizedBox(
-                width: 90.0,
+                width: 100.0,
                 height: 40.0,
                 child: ElevatedButton(
-                  child: Text("Register"),
+                  child: Text("Register", style: TextStyle(fontFamily: 'test', fontSize: 16.0)),
                   onPressed: () => Navigator.pushNamed(context, '/'),
-              )),
-            ],
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                    )
+                )),
+              )],
           )
             ],
           ),
