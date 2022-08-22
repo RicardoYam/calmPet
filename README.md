@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # front_end
 
 A new Flutter project.
@@ -14,3 +15,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# calmPet
+There is the source code for group 7up
+>>>>>>> b7a0cb73e3368b56452283b0e3c0ec9d71a5c1a5
