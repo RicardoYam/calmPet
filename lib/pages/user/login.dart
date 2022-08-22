@@ -26,8 +26,8 @@ class _LoginState extends State<Login> {
             children: [
               SizedBox(
               width: 210.0,
+              height: 50.0,
               child: TextField(
-                autofocus: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(50.0)
@@ -41,8 +41,8 @@ class _LoginState extends State<Login> {
             SizedBox(height: 10.0),
             SizedBox(
               width: 210.0,
+              height: 50.0,
               child: TextField(
-                autofocus: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(50.0)
