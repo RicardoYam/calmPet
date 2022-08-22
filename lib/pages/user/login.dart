@@ -12,37 +12,64 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-        child: Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-            width: 300.0,
-            child: TextField(
-              autofocus: true,
-              decoration: InputDecoration(
-                  labelText: "Username",
-                  hintText: "Enter your username",
-                  prefixIcon: Icon(Icons.person)),
-            ),
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/login.png"),
+            fit: BoxFit.cover,
           ),
-          SizedBox(
-            width: 300.0,
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+              width: 200.0,
+              child: TextField(
+                autofocus: true,
+                decoration: InputDecoration(
+                    hintText: "Username"),
+              ),
+            ),
+            SizedBox(height: 10.0),
+            SizedBox(
+            width: 200.0,
             child: TextField(
             decoration: InputDecoration(
-                labelText: "Password",
-                hintText: "Enter your password",
-                prefixIcon: Icon(Icons.lock)),
+                hintText: "Password"),
             obscureText: true,
+          )),
+          SizedBox(
+            height: 20.0,
           ),
-          ),
-          ElevatedButton(
-            child: Text("Login"),
-            onPressed: () => Navigator.pushNamed(context, '/tabs'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 90.0,
+                height: 40.0,
+                child: ElevatedButton(
+                  child: Text("Login"),
+                  onPressed: () => Navigator.pushNamed(context, '/tabs'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.orange
+                  ),
+              )),
+              SizedBox(width: 30.0),
+              SizedBox(
+                width: 90.0,
+                height: 40.0,
+                child: ElevatedButton(
+                  child: Text("Register"),
+                  onPressed: () => Navigator.pushNamed(context, '/'),
+              )),
+            ],
           )
-        ],
-      ),
-    ));
+            ],
+          ),
+        )
+        )
+    );
   }
 }
