@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'pages/tabs.dart';
 import 'pages/user/login.dart';
+import 'pages/user/register.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +19,8 @@ const MyApp({ Key? key }) : super(key: key);
       home: Tabs(),
       routes: {
         '/login':(context) => Login(),
-        '/tabs':(context) => Tabs()
+        '/tabs':(context) => Tabs(),
+        '/register':(context) => Register()
       },
     );
   }

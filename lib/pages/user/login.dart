@@ -78,7 +78,7 @@ class _LoginState extends State<Login> {
                 height: 40.0,
                 child: ElevatedButton(
                   child: Text("Register", style: TextStyle(fontFamily: 'test', fontSize: 16.0)),
-                  onPressed: () => Navigator.pushNamed(context, '/'),
+                  onPressed: () => Navigator.pushNamed(context, '/register'),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.blue,
                     shape: RoundedRectangleBorder(
