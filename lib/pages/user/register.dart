@@ -43,12 +43,14 @@ class _RegisterState extends State<Register> {
                     width: 210.0,
                     height: 30.0,
                     child: TextField(
+                        textAlignVertical: TextAlignVertical.bottom,
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50.0)),
+                            hintText: "first_name  last_name",
                             filled: true,
                             fillColor: Color.fromARGB(51, 5, 20, 110)),
-                        style: TextStyle(fontFamily: 'test', fontSize: 16.0)),
+                        style: TextStyle(fontFamily: 'test', fontSize: 17.0)),
                   ),
                   SizedBox(height: 15.0),
                   Row(
@@ -67,12 +69,14 @@ class _RegisterState extends State<Register> {
                     width: 210.0,
                     height: 30.0,
                     child: TextField(
+                        textAlignVertical: TextAlignVertical.bottom,
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50.0)),
+                            hintText: "123abc@xxxx.com",
                             filled: true,
                             fillColor: Color.fromARGB(51, 5, 20, 110)),
-                        style: TextStyle(fontFamily: 'test', fontSize: 16.0)),
+                        style: TextStyle(fontFamily: 'test', fontSize: 17.0)),
                   ),
                   SizedBox(height: 15.0),
                   Row(
@@ -91,12 +95,14 @@ class _RegisterState extends State<Register> {
                     width: 210.0,
                     height: 30.0,
                     child: TextField(
+                        textAlignVertical: TextAlignVertical.bottom,
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50.0)),
+                            hintText: "XXXXXXX",
                             filled: true,
                             fillColor: Color.fromARGB(51, 5, 20, 110)),
-                        style: TextStyle(fontFamily: 'test', fontSize: 16.0)),
+                        style: TextStyle(fontFamily: 'test', fontSize: 17.0)),
                   ),
                   SizedBox(height: 15.0),
                   Row(
@@ -132,26 +138,30 @@ class _RegisterState extends State<Register> {
                         width: 100.0,
                         height: 30.0,
                         child: TextField(
+                            textAlignVertical: TextAlignVertical.bottom,
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(50.0)),
+                                hintText: "11",
                                 filled: true,
                                 fillColor: Color.fromARGB(51, 5, 20, 110)),
                             style:
-                                TextStyle(fontFamily: 'test', fontSize: 16.0)),
+                                TextStyle(fontFamily: 'test', fontSize: 17.0)),
                       ),
                       SizedBox(width: 10.0),
                       SizedBox(
                         width: 100.0,
                         height: 30.0,
                         child: TextField(
+                            textAlignVertical: TextAlignVertical.bottom,
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(50.0)),
+                                hintText: "01-A",
                                 filled: true,
                                 fillColor: Color.fromARGB(51, 5, 20, 110)),
                             style:
-                                TextStyle(fontFamily: 'test', fontSize: 16.0)),
+                                TextStyle(fontFamily: 'test', fontSize: 17.0)),
                       ),
                     ],
                   ),
