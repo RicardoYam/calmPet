@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:noise_meter/noise_meter.dart';
 
-class start extends StatefulWidget {
-  const start({Key? key}) : super(key: key);
+class Start extends StatefulWidget {
+  const Start({Key? key}) : super(key: key);
 
   @override
-  State<start> createState() => _startState();
+  State<Start> createState() => _StartState();
 }
 
-class _startState extends State<start> {
+class _StartState extends State<Start> {
    double meanDb = 0;
   bool _isRecording = false;
   StreamSubscription<NoiseReading>? _noiseSubscription;

@@ -63,6 +63,8 @@ flutter:
   assets:
     - images/login.png
     - images/register.png
+    - images/settingbg.png
+    - images/
 
   fonts:
     - family: kang

@@ -1,59 +1,121 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Setting extends StatelessWidget {
+class Setting extends StatefulWidget {
+  const Setting({Key? key}) : super(key: key);
+
+  @override
+  _SettingState createState() => _SettingState();
+}
+
+class _SettingState extends State<Setting> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      constraints: const BoxConstraints(maxHeight: 300.0),
-      child: ListView(
-        padding: const EdgeInsets.only(left: 5.0),
-        children: <Widget>[
-          CircleAvatar(
-            radius: 60.0,
-            backgroundImage: NetworkImage(
-                "https://p.qqan.com/up/2022-1/16412730749939818.jpg"),
-          ),
-          _buildListItem("Duration time", Icons.lock, () {}),
-          _buildListItem("Appointment", Icons.timer, () {}),
-          _buildListItem("xxxx", Icons.abc, () {})
-        ],
-      ),
-    );
-  }
-
-  Widget _buildListItem(String title, IconData iconData, VoidCallback action) {
-    final textStyle = TextStyle(
-        color: Colors.black54, fontSize: 18.0, fontWeight: FontWeight.w600);
-
-    return InkWell(
-      onTap: action,
-      child: Padding(
-        padding: const EdgeInsets.only(
-            left: 10.0, right: 10.0, bottom: 5.0, top: 5.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              width: 35.0,
-              height: 35.0,
-              margin: const EdgeInsets.only(right: 10.0),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.circular(5.0),
+    return Scaffold(
+        appBar: AppBar(
+            // title: Text("3801"),
+            // centerTitle: true,
+            leading: Container(),
+            toolbarHeight: 0),
+        body: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("images/settingbg.png"),
+                fit: BoxFit.fill,
               ),
-              alignment: Alignment.center,
-              child: Icon(iconData, color: Colors.white, size: 24.0),
             ),
-            Text(title, style: textStyle),
-            Expanded(child: Container()),
-            IconButton(
-                icon: Icon(Icons.chevron_right, color: Colors.black26),
-                onPressed: action)
-          ],
-        ),
-      ),
-    );
+            child: Stack(
+              children: [
+                Positioned(
+                    left: MediaQuery.of(context).size.width * 0.44,
+                    top: MediaQuery.of(context).size.height * 0.35,
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                        onTap: () {
+                          Navigator.pushNamed(context, '/register');
+                        },
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.42,
+                          height: MediaQuery.of(context).size.height * 0.08,
+                          alignment: Alignment.center,
+                          child: Text("Account\nManagement",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'test',
+                                  fontSize: 20.0,
+                                  color: Color.fromARGB(255, 253, 230, 230))),
+                        ))),
+                Positioned(
+                    left: MediaQuery.of(context).size.width * 0.40,
+                    top: MediaQuery.of(context).size.height * 0.50,
+                    child: GestureDetector(
+                        behavior: HitTestBehavior.opaque,
+                        onTap: () {
+                          Navigator.pushNamed(context, '/classData');
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          width: MediaQuery.of(context).size.width * 0.46,
+                          height: MediaQuery.of(context).size.height * 0.1,
+                          // color: Colors.white,
+                          child: Text("Class Data",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'test',
+                                  fontSize: 20.0,
+                                  color: Color.fromARGB(255, 253, 230, 230))),
+                        ))),
+                Positioned(
+                    left: MediaQuery.of(context).size.width * 0.40,
+                    top: MediaQuery.of(context).size.height * 0.66,
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () {
+                        Navigator.pushNamed(context, '/projectionMode');
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.42,
+                        height: MediaQuery.of(context).size.height * 0.08,
+                        alignment: Alignment.center,
+                        // color: Colors.white,
+                        child: Text("Projection\nMode",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: 'test',
+                                fontSize: 20.0,
+                                color: Color.fromARGB(255, 253, 230, 230))),
+                      ),
+                    )),
+                Positioned(
+                    left: MediaQuery.of(context).size.width * 0.3,
+                    top: MediaQuery.of(context).size.height * 0.83,
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage("images/bottombutton.png"),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        width: MediaQuery.of(context).size.width * 0.42,
+                        height: MediaQuery.of(context).size.height * 0.07,
+                        alignment: Alignment.center,
+                        // color: Colors.white,
+                        child: Text("Logged Out",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: 'test',
+                                fontSize: 20.0,
+                                color: Color.fromARGB(255, 253, 230, 230))),
+                      ),
+                    ))
+              ],
+            )));
   }
 }
