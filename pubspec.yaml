@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^10.1.0
   video_player_web: ^2.0.12
+  video_player: ^2.4.7
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +67,7 @@ flutter:
     - images/register.png
     - images/settingbg.png
     - images/
+    - assets/
 
   fonts:
     - family: kang

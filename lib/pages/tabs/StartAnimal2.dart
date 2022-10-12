@@ -49,13 +49,13 @@ class _StartAnimalState extends State<StartAnimal2> {
         if (time2Num(now) - time2Num(init) > 10) {
           stop();
 
-          Navigator.pushNamed(context, '/tabs');
+          Navigator.pushNamed(context, '/video');
         }
       } else {
         if (time2Num(now) - lastNoise > 10) {
           stop();
 
-          Navigator.pushNamed(context, '/tabs');
+          Navigator.pushNamed(context, '/video');
         }
       }
     });

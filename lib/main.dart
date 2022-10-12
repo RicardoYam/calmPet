@@ -10,6 +10,7 @@ import 'package:front_end/pages/tabs/Timetable.dart';
 import 'pages/tabs.dart';
 import 'pages/user/login.dart';
 import 'pages/user/register.dart';
+import 'pages/tabs/video.dart';
 
 void main() {
   runApp(MyApp());
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         '/start': (context) => StartAnimal(),
         '/start2': (context) => StartAnimal2(),
         '/classData': (context) => ClassData(),
-        '/projectionMode': (context) => ProjectionMode()
+        '/projectionMode': (context) => ProjectionMode(),
+        '/video' : (context) => VideoApp(),
       },
     );
   }
