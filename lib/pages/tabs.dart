@@ -12,21 +12,22 @@ class Tabs extends StatefulWidget {
 }
 
 class _TabsState extends State<Tabs> {
+  int image_num = 0;
   String topImage = "images/animal1.png";
   List topImages = [
     "images/animal1.png",
     "images/animal2.png",
     "images/animal1.png"
   ];
+  List directions = ["/start", "/start2", "/start"];
+
+  String getDirection(int i) {
+    return directions[i];
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          // title: Text("3801"),
-          // centerTitle: true,
-          leading: Container(),
-          toolbarHeight: 0),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -47,12 +48,12 @@ class _TabsState extends State<Tabs> {
             GestureDetector(
               behavior: HitTestBehavior.opaque,
               onTap: () {
-                Navigator.pushNamed(context, '/start');
+                Navigator.pushNamed(context, getDirection(image_num));
               },
               child: Container(
                   width: 100,
                   height: 40,
-                  margin: EdgeInsets.only(bottom: 40),
+                  margin: EdgeInsets.only(bottom: 70),
                   padding: EdgeInsets.all(5),
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
@@ -74,6 +75,7 @@ class _TabsState extends State<Tabs> {
                         onTap: () {
                           setState(() {
                             topImage = e;
+                            image_num = topImages.indexOf(e);
                           });
                         },
                         child: Container(

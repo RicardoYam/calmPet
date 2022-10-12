@@ -11,7 +11,7 @@ class Start extends StatefulWidget {
 }
 
 class _StartState extends State<Start> {
-   double meanDb = 0;
+  double meanDb = 0;
   bool _isRecording = false;
   StreamSubscription<NoiseReading>? _noiseSubscription;
   late NoiseMeter _noiseMeter;
@@ -19,7 +19,7 @@ class _StartState extends State<Start> {
   @override
   void initState() {
     super.initState();
-    _noiseMeter = new NoiseMeter(onError);
+    _noiseMeter = NoiseMeter(onError);
   }
 
   @override
@@ -80,8 +80,13 @@ class _StartState extends State<Start> {
             "current noise level : ${num.parse(meanDb.toStringAsFixed(2))} decibels",
             style: const TextStyle(fontSize: 20),
           ),
-        ), 
-    Container(child: ElevatedButton(onPressed: ()=>Navigator.pop(context), child: Text("back"), ),)
+        ),
+        Container(
+          child: ElevatedButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text("back"),
+          ),
+        )
       ];
 
   @override
@@ -94,7 +99,7 @@ class _StartState extends State<Start> {
       floatingActionButton: FloatingActionButton(
           backgroundColor: _isRecording ? Colors.red : Colors.green,
           onPressed: _isRecording ? stop : start,
-          child: _isRecording ? Icon(Icons.stop) : Icon(Icons.mic)),
+          child: _isRecording ? const Icon(Icons.stop) : const Icon(Icons.mic)),
     );
   }
 }
