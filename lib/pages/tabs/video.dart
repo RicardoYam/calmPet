@@ -38,18 +38,40 @@ class _VideoAppState extends State<VideoApp> {
           )
               : Container(),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            setState(() {
-              _controller.value.isPlaying
-                  ? _controller.pause()
-                  : _controller.play();
-            });
-          },
-          child: Icon(
-            _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-          ),
+        floatingActionButton:Wrap( //will break to another line on overflow
+          direction: Axis.horizontal, //use vertical to show  on vertical axis
+          children: <Widget>[
+            Container(
+                margin:EdgeInsets.all(10),
+                child: FloatingActionButton(
+                  onPressed: () {
+                    setState(() {
+                      _controller.value.isPlaying
+                          ? _controller.pause()
+                          : _controller.play();
+                    });
+                  },
+                  child: Icon(
+                    _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+                  ),
+            )),
+            //button first
+
+            Container(
+                margin:EdgeInsets.all(10),
+                child: FloatingActionButton(
+                  onPressed: (){
+                    //action code for button 2
+                    Navigator.pushNamed(context, '/tabs');
+                  },
+                  backgroundColor: Colors.deepPurpleAccent,
+                  child: Icon(Icons.arrow_back_rounded),
+                )
+            ), // button second
+            // Add more buttons here
+          ],
         ),
+
 
       ),
     );
